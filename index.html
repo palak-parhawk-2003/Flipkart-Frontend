@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Palak Mobile Shop</title>
+    <link rel="icon" href="./images/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap');
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+        }
+        .flex
+        {
+            display: flex;
+        }
+        header img{
+            margin-left: 10px;
+            width: 80px;
+            height: 80px;
+        }
+        .head-main
+        {
+            justify-content: space-around;
+            align-items: center;
+        }
+        header{
+            padding: 5px 5px;
+            background: rgba(100, 192, 253, 0.815);
+            justify-content: space-between;
+
+        }
+        nav{
+            width: 30%;
+            display: flex;
+        }
+        .menu{
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: white;
+            user-select: none;
+            cursor: pointer;
+        }
+        .menu:hover, .active
+        {
+            color: red;
+        }
+        .src
+        {
+            width: 40%;
+            display: flex;
+        }
+        .search
+        {
+            top: 10px;
+            position: relative;
+            width: 100%;
+            font-size: 1.4rem;
+            border: 2px solid white;
+            outline: none;
+            border-radius: 25px;
+            padding: 0px 10px;
+            color: white;
+            background-color: rgba(0, 162, 255, 0.609);
+            height: 50px;
+        }
+        .sc-icon
+        {
+            text-align: end;
+            right: 5%;
+            color: white;
+            top: 25%;
+            font-size: 1.5rem;
+            position: relative;
+        }
+        .carasole-cont
+        {
+            width: 100vw;
+            height: 500px;
+            margin: 0px auto;
+            overflow: hidden;
+        }
+        .carasole-box
+        {
+            width: 400vw;
+            height: 100%;
+            position: relative;
+            animation-name: carasol;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+        @keyframes carasol {
+            0%{
+                left: 0;
+            }
+            25%{
+                left: 0;
+            }
+            50%{
+                left: -100vw;
+            }
+            75%{
+                left: -100vw;
+            }
+            100%{
+                left: -200vw;
+            }
+            
+            
+        }
+        
+        .carasole-box img{
+            width: 100vw;
+            height: 100%;
+        }
+        .cont{
+            width: 97vw;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .card
+        {
+            margin: 5px auto;
+            width: 300px;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 20px;
+            background-color: rgba(148, 225, 255, 0.774);
+        }
+        .card img
+        {
+            background-color: white;
+            width: 90%;
+            transition: 0.6s;
+            border-radius: 20px;
+        }
+        .card:hover img
+        {
+            width: 95%;
+        }
+        .card .cont-desc
+        {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 1.2rem;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: rgb(248, 42, 6);
+        }
+        .card-offer
+        {
+            color: green;
+            font-size: 1.2rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        @media only screen and (max-width: 600px)
+        {
+            nav{
+                display: none;
+            }
+            .carasole-cont{
+                height: 250px;
+            }
+            .src{
+                display: none;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <header class="flex">
+        <img src="./images/icon.png">
+        <div class="src">
+            <input type="text" class="search">
+        <i class="fas fa-search sc-icon"></i>
+        </div>
+        
+        <nav class="head-main">
+            <div class="menu active">Home</div>
+            <div class="menu">Gallery</div>
+            <div class="menu">About</div>
+            <div class="menu">Contact Us</div>
+        </nav>
+    </header>
+    <main>
+        <div class="carasole-cont">
+            <div class="carasole-box">
+                <img src="./images/banner/banner1.jpg">
+                <img src="./images/banner/banner2.jpg">
+                <img src="./images/banner/banner3.png">
+            </div>
+        </div>
+        <div class="cont">
+            <div class="card">
+                <img src="./images/ph2.webp">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph1.jpeg">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph6.webp">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph3.jpeg">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph4.png">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph2.webp">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph1.jpeg">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph6.webp">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph3.jpeg">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph4.png">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph2.webp">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph3.jpeg">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph4.png">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+            <div class="card">
+                <img src="./images/ph2.webp">
+                <div class="cont-desc">
+                    <div class="card-title">Samsung F42 5G</div>
+                    <div class="card-mrp">₹ 15,000</div>
+                </div>                
+                <div class="card-offer">50% diwali off</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
